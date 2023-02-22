@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-Regular.ttf);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Oswald;
+    background-image: url(../img/fondo.jpg);
+    background-repeat: none;
+    background-size: contain;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+div h1,h2{
+    background-color: white;
+    padding: 3px;
+}
