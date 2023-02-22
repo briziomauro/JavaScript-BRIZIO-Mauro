@@ -9,6 +9,11 @@ let cart = []
 
 let shopProducts = prompt("Bienvenido/a a BriMates, desea comprar algún producto? Por favor, responda si o no.")
 
+while(shopProducts !="si" && shopProducts !="no"){
+    alert("Por favor, responda si o no.")
+    shopProducts = prompt("Bienvenido/a a BriMates, desea comprar algún producto? Por favor, responda si o no.")
+}
+
 if (shopProducts == "si") {
     let productList = products.map((product) => product.name + " - " + product.price + "$");
     alert(productList.join("\n"))
