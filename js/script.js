@@ -9,19 +9,18 @@ let cart = []
 
 let shopProducts = prompt("Bienvenido/a a BriMates, desea comprar algún producto? Por favor, responda si o no.")
 
-while(shopProducts !="si" && shopProducts !="no"){
+while(shopProducts.toUpperCase() !="SI" && shopProducts !="NO"){
     alert("Por favor, responda si o no.")
     shopProducts = prompt("Bienvenido/a a BriMates, desea comprar algún producto? Por favor, responda si o no.")
 }
 
-if (shopProducts == "si") {
-    let productList = products.map((product) => product.name + " - " + product.price + "$");
-    alert(productList.join("\n"))
-} else if (shopProducts == "no") {
+if (shopProducts.toUpperCase() == "SI") {
+} 
+    else if (shopProducts.toUpperCase() == "NO") {
     alert("Gracias, vuelva pronto!")
 }
-while (shopProducts != "no") {
-    let product = prompt("Seleccione un producto que desee.")
+while (shopProducts.toUpperCase() != "NO") {
+    let product = prompt("Seleccione un producto que desee." + "\n" + products.map((product) => product.name + " - " + product.price + "$").join("\n"))
     let price = 0
     if (product == "Mate Imperial" || product == "Yerba Playadito" || product == "Termo Stanley" || product == "Matera" || product == "Bombilla Pico de Loro") {
         switch (product) {
@@ -49,7 +48,7 @@ while (shopProducts != "no") {
         alert("Ese producto no existe. Vuelva a seleccionar!")
     }
     shopProducts = prompt("Necesita algo mas?")
-    while (shopProducts === "no") {
+    while (shopProducts.toUpperCase() === "NO") {
         alert("Gracias por su compra. Vuelva pronto!")
         break
     }
